@@ -5,7 +5,9 @@ def version = [
         junit: "4.12",
         androidJunit: "1.1.1",
         expresso: "3.2.0",
-        glide: "4.9.0"
+        glide: "4.9.0",
+        gson: "2.8.6",
+        crypto: "1.0.0-alpha02"
 ]
 
 ext {
@@ -20,7 +22,8 @@ ext {
 
             android: [
                     ktx: "androidx.core:core-ktx:$version.androidxKtx",
-                    appcompact: "androidx.appcompat:appcompat:$version.androidx"
+                    appcompact: "androidx.appcompat:appcompat:$version.androidx",
+                    crypto: "androidx.security:security-crypto:$version.crypto"
             ],
 
             kotlin: [
@@ -38,6 +41,9 @@ ext {
 
             glide: [
                     glide: "com.github.bumptech.glide:glide:$version.glide"
+            ],
+            gson: [
+                    gson: "com.google.code.gson:gson:$version.gson"
             ]
     ]
 }

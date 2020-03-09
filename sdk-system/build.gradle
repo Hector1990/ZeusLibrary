@@ -30,6 +30,9 @@ dependencies {
 
     implementation library.android.ktx
     implementation library.android.appcompact
+    implementation library.android.crypto
+
+    implementation library.gson.gson
 
     testImplementation library.test.junit
 

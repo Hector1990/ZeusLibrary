@@ -1,0 +1,40 @@
+apply plugin: 'com.jfrog.bintray'
+
+group 'com.wolfspider.zeus.sdk'
+version '1.0.0-beta'
+
+project.ext {
+    mavGitUrl = ''
+    mavProjectName = 'ZeusLibrary'
+    mavLibraryLicenses = ["":'']
+    mavLibraryDescription = "An Android library"
+    mavPublishToMavenLocal = true
+    mavSiteUrl = ''
+}
+
+def properties = new Properties()
+properties.load(new FileInputStream("local.properties"))
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    publications = ['Production']
+    configurations = ['archives']
+    override = true
+    pkg {
+        repo = 'maven'
+        name = 'AwesomeLib'
+        description = "It's an android library"
+        publicDownloadNumbers = true
+        licenses = ['']
+        vcsUrl = ''
+        version {
+            name = this.version
+            desc = "Version ${this.version}"
+            released = new Date()
+            vcsTag = this.version
+        }
+    }
+}
+
+apply from: 'https://raw.githubusercontent.com/sky-uk/gradle-maven-plugin/master/gradle-mavenizer.gradle'
