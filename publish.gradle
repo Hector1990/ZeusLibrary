@@ -1,6 +1,6 @@
 apply plugin: 'com.jfrog.bintray'
 
-group 'com.wolfspider.zeus.sdk'
+group 'com.wolfspider.zeus'
 version '1.0.0-beta'
 
 project.ext {
@@ -16,8 +16,8 @@ def properties = new Properties()
 properties.load(new FileInputStream("local.properties"))
 
 bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
+    user = 'hector1990'
+    key = '4ee8503d7c89dab9ab04bb90a3778a37807766ce'
     publications = ['Production']
     configurations = ['archives']
     override = true
