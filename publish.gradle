@@ -4,12 +4,12 @@ group 'com.wolfspider.zeus.sdk'
 version '1.0.0-beta'
 
 project.ext {
-    mavGitUrl = ''
+    mavGitUrl = 'https://github.com/Hector1990/ZeusLibrary.git'
     mavProjectName = 'ZeusLibrary'
-    mavLibraryLicenses = ["":'']
+    mavLibraryLicenses = ["MIT":'https://github.com/Hector1990/ZeusLibrary/blob/master/LICENSE']
     mavLibraryDescription = "An Android library"
     mavPublishToMavenLocal = true
-    mavSiteUrl = ''
+    mavSiteUrl = 'https://github.com/Hector1990/ZeusLibrary'
 }
 
 def properties = new Properties()
@@ -23,11 +23,11 @@ bintray {
     override = true
     pkg {
         repo = 'maven'
-        name = 'AwesomeLib'
+        name = 'ZeusLibrary'
         description = "It's an android library"
         publicDownloadNumbers = true
-        licenses = ['']
-        vcsUrl = ''
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/Hector1990/ZeusLibrary'
         version {
             name = this.version
             desc = "Version ${this.version}"

@@ -2,10 +2,10 @@ def version = [
         kotlin: "1.3.61",
         androidx: "1.1.0",
         androidxKtx: "1.2.0",
-        junit: "4.12",
+        junit: "4.13",
         androidJunit: "1.1.1",
         expresso: "3.2.0",
-        glide: "4.9.0",
+        glide: "4.11.0",
         gson: "2.8.6",
         crypto: "1.0.0-alpha02"
 ]

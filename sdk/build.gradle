@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply from: '../publish.gradle'
 
 android {
     compileSdkVersion androidTarget.compileSdkVersion
@@ -36,4 +37,7 @@ dependencies {
     androidTestImplementation library.androidTest.junit
     androidTestImplementation library.androidTest.expresso
 
+    api project(path: ':sdk-media')
+    api project(path: ':sdk-ui')
+    api project(path: ':sdk-system')
 }
